@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:omnitrics_thesis/getStarted/Widget/button.dart';
-import 'package:omnitrics_thesis/getStarted/Widget/dotIndicator.dart';
 import '../auth/sign-in/login.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -8,39 +7,35 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        child: Container(
+          width: screenSize.width,
+          height: screenSize.height,
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // TITLE
-              const Text(
+              // TITLE with responsive font size
+              Text(
                 'OmniTrics',
                 style: TextStyle(
-                  fontSize: 60,
+                  fontSize: screenSize.width * 0.18,
                   fontWeight: FontWeight.bold,
-                  height: 3,
                 ),
               ),
-              const SizedBox(height: 200),
-
               const Spacer(),
-
               // BUTTON
               getStartedButton(
-                onPressed: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
               ),
-              const SizedBox(height: 32),
-              // DOT INDICATOR
-              dotIndicator(),
-              const SizedBox(height: 32), // Bottom padding
             ],
           ),
         ),
@@ -48,5 +43,3 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
-
-

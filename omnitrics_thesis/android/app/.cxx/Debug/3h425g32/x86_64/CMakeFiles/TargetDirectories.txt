@@ -1,0 +1,2 @@
+D:/CODES/Thesis/Thesis-Project_Omnitrics-Application/omnitrics_thesis/android/app/.cxx/Debug/3h425g32/x86_64/CMakeFiles/edit_cache.dir
+D:/CODES/Thesis/Thesis-Project_Omnitrics-Application/omnitrics_thesis/android/app/.cxx/Debug/3h425g32/x86_64/CMakeFiles/rebuild_cache.dir
